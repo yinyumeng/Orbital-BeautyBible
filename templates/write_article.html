@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	  <title>Beautybible</title>
+       <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="../css/bootstrap.css" rel="stylesheet">
+      <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="../css/main.css">
+	</head>
+    <body>
+	  <div class="container-fluid">
+	  
+	    <!--Top bar -->
+		<div class="row-fluid top-container">  
+	         <div class="span5">
+	            <img class="logo" src="../images/logo.png">
+	         </div>
+	          <div class="span3 offset9 signin-align">
+	          <span> {{ user_mail }} <a href="{{ logout }}">logout</a></span>
+	       </div>
+        </div>
+		<!-- End of top bar -->
+		
+		<!-- Main navigation -->
+		
+		<div class = "navbar">
+	     <div class = "navbar-inner">
+	      <ul class = "nav">   
+			<!--not completed-->
+		      <li> <a href="/beautybible">Home</a></li>
+			  <li> <a href="/beautyadvice">Beauty advice</a></li>
+			  <li> <a href="/products">Products</a></li>
+			  
+			  <li> <a href="/body beautification">Body beautification</a></li>
+			  <li> <a href="/information sharing">Information sharing</a></li>
+			</ul>
+	    </div>
+	   </div>
+	   
+	   <form action="/add_article" method ="post">
+	   <fieldset >
+	      <legend>Write article</legend>
+	     
+	      <div class="span12 title1">
+		 
+		 
+		   
+			<input type="text" name="title_article" placeholder="Press Your Title Here!" class="textBox1" />
+			<br/><br/>
+	        <p class="note">Choose Article classification</p>
+	     
+		    <div class="choose_classification">
+                <input type="radio" name="classification" value="Beauty advice" > 
+				<label class="choice">Beauty advice</label>	
+		        <input type="radio" name="classification" value="Body beautification" > 
+				<label class="choice">Body beautification</label>
+            </div>
+		 
+	     
+		 <br/>
+		
+			<textarea class ="textarea1" name="text_article"  placeholder="Article content (less than 500 characters including space and punctuation)"  ></textarea>
+		    <br/>
+			<input type="submit" value="submit" class="submit" />
+		    
+		 
+              </div>
+            </fieldset>
+			</form>
+	     </div>
+	
+	  
+	</body>
+</html>

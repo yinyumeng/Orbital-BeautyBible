@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	  <title>Beautybible</title>
+      <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="../css/bootstrap.css" rel="stylesheet">
+      <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="../css/main.css">
+	  
+	  <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	  <script src="../js/edit.js"></script>
+	</head>
+    <body>
+	  <div class="container-fluid">
+	  
+	    <!--Top bar -->
+		<div class="row-fluid top-container">  
+	         <div class="span5">
+	            <img class="logo" src="../images/logo.png">
+	         </div>
+	          <div class="span3 offset9 signin-align">
+	          <span> {{ user_mail }} <a href="{{ logout }}">logout</a></span>
+	       </div>
+        </div>
+		<!-- End of top bar -->
+		
+		<!-- Main navigation -->
+		
+		<div class = "navbar">
+	     <div class = "navbar-inner">
+	      <ul class = "nav">   
+			<!--not completed-->
+			  <li> <a href="/beautybible">Home</a></li>
+			  <li> <a href="/beautyadvice">Beauty advice</a></li>
+			  <li> <a href="/products">Products</a></li>
+			 
+			  <li> <a href="/body beautification">Body beautification</a></li>
+			  <li> <a href="/information sharing">Information sharing</a></li>
+			</ul>
+	    </div>
+	   </div>
+	
+	   <fieldset >
+	      <legend>My Articles!</legend>
+	     
+	      <div id="event-display">
+		  <div >
+		    <ul class="list" >   
+            
+			{% for article in articles %}
+          
+			<form action="/delete_article" method="post">
+			 <div class="textarea3" name="list" >
+			  
+			  <li>  {{ article.title}}</li>
+			 <br/>
+		       {{ article.text}}
+			   
+              <div>
+			   <button class="delete" key={{article.key()}} >delete</button>
+			   </div> 
+              </div>               
+			   </form>
+               
+			 
+			 </br>
+			 </br>
+			{% endfor %}
+               
+			</ul>
+		    </div>
+			</div>
+			
+		 
+		  
+       
+	   </fieldset>
+    </div>
+	</body>
+</html>

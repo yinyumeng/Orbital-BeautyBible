@@ -1,0 +1,82 @@
+<!-- Front page for logged in Giftbook user -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> beautybible</title>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+	  
+	    <!--Top bar -->
+		<div class="row-fluid top-container">  
+	         <div class="span5">
+	            <img class="logo" src="../images/logo.png">
+	         </div>
+	          <div class="span3 offset9 signin-align">
+	          <span> {{ user_mail }} <a href="{{ logout }}">logout</a></span>
+	       </div>
+        </div>
+		<!-- End of top bar -->
+		
+		<!-- Main navigation -->
+		
+		<div class = "navbar">
+	     <div class = "navbar-inner">
+	      <ul class = "nav">   
+			<!--not completed-->
+			  <li> <a href="/beautybible">Home</a></li>
+			  <li> <a href="/beautyadvice">Beauty advice</a></li>
+			  <li> <a href="/products">Products</a></li>
+		
+			  <li> <a href="/body beautification">Body beautification</a></li>
+			  <li> <a href="/information sharing">Information sharing</a></li>
+			</ul>
+	    </div>
+	   </div>
+	</div> 
+	   
+	  <div class="row-fluid">
+	      <div class="span5">
+	       <img class="makeuppic" src="../images/makeup.png">
+	      </div>
+		  
+		  
+		  
+	      <div class="span7">
+		  <div>
+		   <ul class ="vote">
+		     
+		      </br></br></br>
+			  <li><a href ="/write_article">Write a new article!</a></li>
+			  </br>
+			  <li><a href ="/display">My articles</a></li>
+			  </br>
+			  <li><a href ="/post_product">Post a new makeup product!</a></li>
+			  </br>
+			  <li><a href ="/post_item">Share  places with unique features</br>with  your friends!</a></li>
+
+              </br></br>              
+		   </ul>
+		  </div>
+	      <div class="top-pad-two ">
+		  <div class="top">
+	     <p> Don&rsquo;t know where to get advices on skin care? <br>
+	           Want to share experiences on makeup products with others?<br>
+			   Interested in DIY or seeking for special products?</p>
+	    
+	      <p> With beautybible, all these becomes effortless!</p>
+	    
+	      <p> With our website you can easily find many useful informations ~<br>
+	          After signing in with your gmail account you can also share your experienceswith others!</p>
+	      </div>
+		  </div>
+	      </div>
+	  </div>
+	  
+	</body>
+</html>
